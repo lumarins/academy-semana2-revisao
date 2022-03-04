@@ -12,5 +12,15 @@
  * @returns 
  */
 export const chunk = (valores: number[], tamanho: number): number[][] => {
-  return null;
+  let quantidadeVetores = Math.ceil(valores.length / tamanho);
+  const chunkArray = [];
+
+  for (let i = 1; i <= quantidadeVetores; i++) {
+    const start = (i - 1) * tamanho;
+    const end = i * tamanho; 
+    const vetor = valores.slice(start, end);
+    chunkArray.push(vetor);
+  }
+
+  return chunkArray;
 };
