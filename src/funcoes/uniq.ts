@@ -8,5 +8,6 @@
  * @returns somente os itens definidos.
  */
 export const uniq = <T>(args: T[]): T[] => {
-  return null;
+  const vetorUnicos = [...new Set(args)];
+  return vetorUnicos;
 };
